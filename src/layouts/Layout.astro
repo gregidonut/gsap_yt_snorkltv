@@ -1,5 +1,7 @@
 ---
 import "./globals.css";
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -9,7 +11,7 @@ import "./globals.css";
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/sword.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>yt</title>
+        <title>yt_snorkltv - {title}</title>
     </head>
     <body>
         <div id="root">

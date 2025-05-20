@@ -3,12 +3,24 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/header/Header.astro";
 import Main from "@/components/main/Main.astro";
 
-import ReactSection from "./reactSection/_ReactSection.tsx";
+import { getLessons, type Lesson } from "@/utils";
+
+const lessons = getLessons();
 ---
 
-<Layout>
+<Layout title={"home"}>
     <Header />
     <Main>
-        <ReactSection client:only="react" />
+        <ol>
+            {
+                lessons.map(function (l: Lesson) {
+                    return (
+                        <li>
+                            <a href={l.url}>{l.title}</a>
+                        </li>
+                    );
+                })
+            }
+        </ol>
     </Main>
 </Layout>
