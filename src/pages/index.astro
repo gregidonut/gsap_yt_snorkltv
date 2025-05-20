@@ -2,9 +2,13 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/header/Header.astro";
 import Main from "@/components/main/Main.astro";
+
+import ReactSection from "./reactSection/_ReactSection.tsx";
 ---
 
 <Layout>
     <Header />
-    <Main />
+    <Main>
+        <ReactSection client:only="react" />
+    </Main>
 </Layout>
