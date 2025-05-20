@@ -15,7 +15,7 @@ export default function LessonComponent(): React.JSX.Element {
 
     return (
         <section ref={container}>
-            <h2>ulol</h2>
+            <h3>ulol</h3>
         </section>
     );
 }
