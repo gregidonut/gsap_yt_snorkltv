@@ -8,12 +8,11 @@ export default function LessonComponent(): React.JSX.Element {
     const container = useRef(null);
     useGSAP(
         function () {
-            gsap.to("img", {
-                x: 400,
-                y: 350,
-                scale: 3,
+            gsap.from("img", {
+                y: -350,
                 duration: 3,
                 rotation: 360,
+                ease: "bounce",
             });
         },
         { scope: container },
@@ -21,7 +20,7 @@ export default function LessonComponent(): React.JSX.Element {
 
     return (
         <section ref={container}>
-            <img src="/sword.svg" alt="sword" height={75} />
+            <img src="/ball.svg" alt="ball" height={75} />
         </section>
     );
 }

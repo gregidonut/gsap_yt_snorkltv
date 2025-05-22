@@ -1,0 +1,17 @@
+.section > nav > ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+
+    background: #f1fa8c;
+    width: max-content;
+    padding: 1rem 2rem;
+}
+.section > nav > ul > li > button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+}
